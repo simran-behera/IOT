@@ -1,0 +1,62 @@
+int nred=13;
+int ngreen=12;
+int ered=11;
+int egreen=10;
+int sred=9;
+int sgreen=8;
+int wred=7;
+int wgreen=6;
+
+
+
+void setup()
+{
+  pinMode(nred,OUTPUT);
+  pinMode(ngreen, OUTPUT);
+  pinMode(ered,OUTPUT);
+  pinMode(egreen, OUTPUT);
+  pinMode(sred,OUTPUT);
+  pinMode(sgreen, OUTPUT);
+  pinMode(wred,OUTPUT);
+  pinMode(wgreen, OUTPUT);
+}
+
+void loop()
+{
+  digitalWrite(ngreen, HIGH);
+  digitalWrite(ered, HIGH);
+  digitalWrite(sred, HIGH);
+  digitalWrite(wred, HIGH);
+  delay(5000);
+  digitalWrite(ngreen, LOW);
+  digitalWrite(ered, LOW);
+  digitalWrite(sred,LOW);
+  digitalWrite(wred, LOW);
+  digitalWrite(egreen, HIGH);
+  digitalWrite(nred, HIGH);
+  digitalWrite(sred, HIGH);
+  digitalWrite(wred, HIGH);
+  delay(5000);
+  digitalWrite(egreen, LOW);
+  digitalWrite(nred, LOW);
+  digitalWrite(sred, LOW);
+  digitalWrite(wred, LOW);
+  digitalWrite(sgreen, HIGH);
+  digitalWrite(nred, HIGH);
+  digitalWrite(ered, HIGH);
+  digitalWrite(wred, HIGH);
+  delay(5000);
+  digitalWrite(sgreen, LOW);
+  digitalWrite(nred, LOW);
+  digitalWrite(ered, LOW);
+  digitalWrite(wred, LOW);
+  digitalWrite(wgreen, HIGH);
+  digitalWrite(nred, HIGH);
+  digitalWrite(sred, HIGH);
+  digitalWrite(ered, HIGH);
+  delay(5000);
+  digitalWrite(wgreen, LOW);
+  digitalWrite(nred, LOW);
+  digitalWrite(sred, LOW);
+  digitalWrite(ered, LOW);
+}

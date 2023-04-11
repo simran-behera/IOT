@@ -1,0 +1,25 @@
+int SensorPin = 2;
+int OutputPin1 = 13;
+int OutputPin2 = 12;
+
+void setup() {
+  pinMode(OutputPin1, OUTPUT);
+  pinMode(OutputPin2, OUTPUT);
+  pinMode(SensorPin, INPUT);
+  Serial.begin(9600);
+}
+
+void loop() {
+  int SensorValue = digitalRead(SensorPin);
+  
+  Serial.print("SensorPin Value: ");
+  Serial.println(SensorValue);
+  delay(1000);
+   if (SensorValue==LOW){ // LOW MEANS Object Detected
+    digitalWrite(OutputPin1, HIGH);
+  }
+  else
+  {
+    digitalWrite(OutputPin2, HIGH); 
+  }
+}
